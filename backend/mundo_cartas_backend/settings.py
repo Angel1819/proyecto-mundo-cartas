@@ -1,43 +1,68 @@
+"""
+Configuración principal del proyecto Mundo Cartas.
+Este archivo contiene toda la configuración de Django, incluyendo:
+- Configuración de base de datos
+- Apps instaladas
+- Middleware y seguridad
+- Internacionalización
+- y más...
+"""
+
+# os: Proporciona funciones para interactuar con el sistema operativo
+# Usado aquí para manejar variables de entorno y rutas
 import os
+
+# Path: Clase para manejar rutas de archivos/directorios de forma segura
+# Evita problemas con diferentes sistemas operativos (Windows/Linux)
 from pathlib import Path
+
+# timedelta: Clase para manejar duraciones de tiempo
+# La usamos para configurar la duración de los tokens JWT
 from datetime import timedelta
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Directorio base del proyecto
+# Útil para construir rutas relativas a este archivo
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Cargar variables de entorno
+# Cargar variables de entorno desde archivo .env
+# Esto permite configurar el proyecto sin hardcodear valores sensibles
 from dotenv import load_dotenv
 load_dotenv()
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# Clave secreta para cifrado y sesiones
+# IMPORTANTE: Debe ser cambiada en producción y nunca compartida
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-default-key-change-this')
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# Modo debug: True en desarrollo, False en producción
+# En producción, deshabilitar para evitar exponer información sensible
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
+# Hosts permitidos para acceder a la aplicación
+# En producción, especificar dominios exactos
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
-# Application definition
+# Aplicaciones instaladas
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    # Apps Django por defecto
+    'django.contrib.admin',        # Panel de administración
+    'django.contrib.auth',         # Autenticación de usuarios
+    'django.contrib.contenttypes', # Tipos de contenido genéricos
+    'django.contrib.sessions',     # Manejo de sesiones
+    'django.contrib.messages',     # Sistema de mensajes
+    'django.contrib.staticfiles',  # Archivos estáticos
     
-    # Third party apps
-    'rest_framework',
-    'rest_framework_simplejwt',
-    'corsheaders',
-    'django_filters',
-    'drf_yasg',
-    'debug_toolbar',
+    # Apps de terceros
+    'rest_framework',             # Framework REST API
+    'rest_framework_simplejwt',   # Autenticación JWT
+    'corsheaders',               # Manejo de CORS para frontend
+    'django_filters',            # Filtrado avanzado de querysets
+    'drf_yasg',                 # Documentación automática OpenAPI
+    'debug_toolbar',            # Herramienta de depuración
     
-    # Local apps
-    'authentication',
-    'inventory',
-    'sales',
+    # Apps propias del proyecto
+    'authentication',           # Gestión de usuarios y permisos
+    'inventory',               # Control de inventario
+    'sales',                   # Registro de ventas
 ]
 
 MIDDLEWARE = [
