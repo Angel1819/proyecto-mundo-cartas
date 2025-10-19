@@ -19,10 +19,10 @@ El objetivo principal es construir una plataforma digital que facilite la gesti�
 
 El repositorio incluye documentos clave para entender el contexto y desarrollo del proyecto:
 
-- **Informe-MVP-Mundo-Cartas-Angel-Alejandro.docx**: especificación funcional del MVP.  
-- **Backlog.docx**: planificación detallada con historias de usuario y tareas.  
-- **mundo_cartas.sql**: scripts y diseño de la base de datos.  
-- **Recopilacion-respuestas-entrevista.docx**: requisitos y comentarios del dueño, Claudio.  
+- **Informe-MVP-Mundo-Cartas-Angel-Alejandro.docx**: especificación funcional del MVP.
+- **Backlog.docx**: planificación detallada con historias de usuario y tareas.
+- **mundo_cartas.sql**: scripts y diseño de la base de datos.
+- **Recopilacion-respuestas-entrevista.docx**: requisitos y comentarios del dueño, Claudio.
 - Opcionalmente, **Informe-de-Diagnostico-Mundo-Cartas.docx** y **Entidades-principales-del-sistema-Mundo-Cartas.docx** para contexto adicional.
 
 ## Equipo
@@ -31,10 +31,55 @@ Este proyecto es desarrollado por Angel Medina y Alejandro Barraza como parte de
 
 ## Tecnologías
 
-- Backend: Django REST Framework  
-- Frontend: React  
-- Base de datos: PostgreSQL  
+- Backend: Django REST Framework
+- Frontend: React
+- Base de datos: PostgreSQL
 - Diseño UI: Figma
+
+## Inicio Rápido
+
+### Requisitos Previos
+
+- Python 3.11+
+- Node.js 18+
+- PostgreSQL 15
+- Git
+
+### Configuración Backend (Django)
+
+```bash
+# Crear y activar entorno virtual
+python -m venv venv
+venv\Scripts\activate  # Windows
+
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Configurar variables de entorno
+cp .env.example .env
+# Editar .env con tus valores
+
+# Ejecutar migraciones
+python manage.py migrate
+
+# Iniciar servidor
+python manage.py runserver
+```
+
+### Configuración Frontend (React)
+
+```bash
+# Instalar dependencias
+cd mundo-cartas-frontend
+npm install
+
+# Configurar variables de entorno
+cp .env.example .env
+# Editar .env con tus valores
+
+# Iniciar aplicación
+npm start
+```
 
 ## Cómo contribuir
 

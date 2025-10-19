@@ -3,7 +3,7 @@
 **Proyecto:** Sistema de Gestión de Inventario y Ventas  
 **Equipo:** Angel Alejandro (Backend) + Alejandro (Frontend)  
 **Metodología:** Scrum con sprints semanales  
-**Período total:** 20 de octubre - 13 de diciembre de 2025 (55 días)  
+**Período total:** 19 de octubre - 12 de diciembre de 2025 (55 días)  
 **Última actualización:** 19 de octubre de 2025, 2:45 AM  
 **Versión:** 3.0 (con categorías dinámicas)
 
@@ -64,9 +64,9 @@ Desarrollar un MVP funcional que permita a Mundo Cartas:
 
 ### Calendario de Sprints
 
-| Sprint       | Épica Principal              | Fechas         | Duración | Horas | Estado        |
-| ------------ | ---------------------------- | -------------- | -------- | ----- | ------------- |
-| **Sprint 1** | Autenticación y Autorización | 20-26 oct      | 7 días   | 35h   | ✅ Planificado |
+| Sprint       | Épica Principal              | Fechas         | Duración | Horas | Estado         |
+| ------------ | ---------------------------- | -------------- | -------- | ----- | -------------- |
+| **Sprint 1** | Autenticación y Autorización | 19-25 oct      | 7 días   | 35h   | ✅ Planificado |
 | **Sprint 2** | Inventario Esencial          | 27 oct - 2 nov | 7 días   | 41h   | ✅ Planificado |
 | **Sprint 3** | POS Simplificado             | 3-9 nov        | 7 días   | 29h   | ✅ Planificado |
 | **Sprint 4** | Reservas y Apartados         | 10-16 nov      | 7 días   | ~30h  | ⏳ Pendiente   |
@@ -107,7 +107,7 @@ Desarrollar un MVP funcional que permita a Mundo Cartas:
 
 ### Tareas Detalladas por Día
 
-#### Domingo 20 de octubre (7 horas)
+#### Domingo 19 de octubre (7 horas)
 
 | ID  | Tarea                                  | Responsable        | Horas |
 | --- | -------------------------------------- | ------------------ | ----- |
@@ -737,18 +737,18 @@ BE = Backend | FE = Frontend
 ### Lecciones Aprendidas Durante Planificación
 
 1. **Categorías Dinámicas (Sprint 2):**
-   
+
    - Planificación detallada reveló limitación de choices hardcodeadas
    - Inversión de 6 horas adicionales ahorra trabajo futuro
    - Decisión documentada en BITACORA_DESARROLLO.md
 
 2. **MovimientoInventario Anticipado:**
-   
+
    - Implementar auditoría en Sprint 2 (no Sprint 3) permite reutilización
    - Ahorro de 3 horas en Sprint 3
 
 3. **Transacciones Atómicas Críticas:**
-   
+
    - Ventas requieren coordinación de múltiples operaciones
    - select_for_update previene race conditions
 
