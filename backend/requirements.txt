@@ -1,0 +1,20 @@
+# Django y Django REST Framework
+Django==4.2.7
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.3.0  # Para autenticación JWT
+django-cors-headers==4.3.1            # Para permitir peticiones del frontend
+
+# Base de datos
+psycopg2-binary==2.9.9                # Driver PostgreSQL
+
+# Utilidades
+python-dotenv==1.0.0                  # Para variables de entorno
+django-filter==23.3                   # Para filtrado en API
+drf-yasg==1.21.7                      # Para documentación API
+
+# Testing
+pytest==7.4.3
+pytest-django==4.7.0
+
+# Seguridad
+django-debug-toolbar==4.2.0           # Solo para desarrollo
