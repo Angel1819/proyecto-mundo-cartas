@@ -72,7 +72,7 @@ Si necesitas configurar tu ambiente de desarrollo:
 
 ### Cronograma de Sprints
 
-**Sprint 1 (20-26 oct): Autenticación** ⏳
+**Sprint 1 (19-25 oct): Autenticación** ⏳
 
 - Configuración inicial del proyecto
 - Sistema de autenticación con JWT
